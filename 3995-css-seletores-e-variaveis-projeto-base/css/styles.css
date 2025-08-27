@@ -1,6 +1,10 @@
 @import url('./cabecalho.css');
 @import url('./menu.css');
 @import url('./destaque.css');
+@import url('./nossos_servicos.css');
+@import url('./planos.css');
+@import url('./ofertas.css');
+@import url('./marcasParceiras.css');
 
 
 :root {
@@ -17,6 +21,8 @@
     --cor-neutra-medio: #b9b9b9;
     --cor-neutra-light: #ffffff;
 
+    --cor-primaria-box-shadow: rgba(193, 55, 36, 0.4)
+    --cor-secundaria-box-shadow: rgba(162, 183, 43, 0.4)
     /* Tipografia */
     --font-sigmar: "Sigmar", sans-serif;
     --font-poppins: "Poppins", sans-serif;
@@ -52,6 +58,26 @@
     --gap-xl: 2rem;
     --gap-xxl: 2.5rem;
     --gap-xxxl: 6rem;
+}
+h2,h2,h3,h4,h5,h6{
+    font-family: var(--font-sigmar);
+    line-height: var(--line-height);
+}
+
+h1{
+    font-size: var(--font-size-xxxl);
+}
+h2{
+    font-size: var(--font-size-xxl);
+}
+h3{
+    font-size: var(--font-size-xl);
+}
+h4{
+    font-size: var(--fonte-size-l);
+}
+h5{
+    font-size: var(--fonte-size-xm);
 }
 
 body{
