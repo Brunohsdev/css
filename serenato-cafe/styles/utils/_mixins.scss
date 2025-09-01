@@ -1,6 +1,13 @@
+@use '../base/variables';
+
 @mixin flexbox($justify:center, $align:center, $direction:row) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;
+}
+
+//os três pontinhos é para a passagem de multiplos parametros
+@mixin transition($properties...){
+    transition: $properties variables.$transition-duration ease-in-out;
 }

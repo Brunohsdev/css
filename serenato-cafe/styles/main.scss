@@ -3,4 +3,10 @@
 @use 'layout/header';
 @use "components/cards";
 @use "pages/home";
-@use "utils/mixins"
+@use "utils/mixins";
+@use 'components/buttons';
+@use 'components/forms';
+@use "utils/dark-mode";
+@use "layout/footer";
+@use "components/modals";
+@use "utils/functions";
