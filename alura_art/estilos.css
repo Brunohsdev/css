@@ -38,6 +38,16 @@
   --gap-2xl: 4rem;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.3;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 h1,
 h2,
 h3,
@@ -46,6 +56,15 @@ h5 {
   font-family: var(--fonte-titulos);
   font-size: var(--fonte-size-xl);
   font-weight: 700;
+}
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (max-width: 768px) {
   h1:not(h1),
@@ -65,6 +84,9 @@ body {
 .container {
   width: 1192px;
   margin: 0 auto;
+  animation: appear;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 @media screen and (max-width: 768px) {
   .container {
@@ -97,6 +119,11 @@ body {
   display: flex;
   justify-content: space-between;
   gap: var(--gap-m);
+}
+@media screen and (max-width: 425px) {
+  .cabecalho__lista {
+    display: none;
+  }
 }
 
 .cabecalho__item > a {
@@ -202,6 +229,11 @@ body {
     padding: 0 5.5rem;
   }
 }
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  .banner__texto-principal {
+    padding: 0;
+  }
+}
 
 .banner__titulo {
   color: var(--cor-titulo);
@@ -227,6 +259,12 @@ body {
     padding: var(--padding-xl) 0;
   }
 }
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  .quem-somos {
+    flex-direction: column-reverse;
+    gap: var(--gap-l);
+  }
+}
 
 .quem-somos__texto-principal {
   display: flex;
@@ -234,6 +272,12 @@ body {
   flex-direction: column;
   gap: var(--gap-l);
   width: 45%;
+}
+@media screen and (max-width: 425px) {
+  .quem-somos__texto-principal {
+    width: 100%;
+    align-items: stretch;
+  }
 }
 
 .quem-somos__titulo {
@@ -287,9 +331,19 @@ body {
     justify-content: space-around;
   }
 }
+@media screen and (max-width: 768px) and (max-width: 425px), screen and (orientation: landscape) and (max-width: 425px) {
+  .sobre-nos__beneficios {
+    text-align: center;
+  }
+}
 
 .sobre-nos__beneficios--card {
   width: 33.33%;
+}
+@media screen and (max-width: 425px) {
+  .sobre-nos__beneficios--card {
+    width: 100%;
+  }
 }
 .sobre-nos__beneficios--card > h3 {
   font-size: var(--fonte-size-m);
@@ -363,6 +417,12 @@ body {
     max-width: 25%;
   }
 }
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  .nosso-impacto__estatistica {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 
 .nosso-impacto__estatistica.impacto-estudantes > h3 {
   color: var(--cor-subtitulo-azul);
@@ -405,6 +465,11 @@ body {
     gap: var(--gap-xl);
   }
 }
+@media screen and (max-width: 768px) and (max-width: 425px) {
+  .vantagens > div[class=container] {
+    text-align: center;
+  }
+}
 .vantagens > div[class=container] > a:hover {
   transition: 0.2s ease-in;
   background-color: var(--cor-destaque-roxo);
@@ -416,6 +481,12 @@ body {
   justify-content: space-between;
   align-items: start;
 }
+@media screen and (max-width: 425px) {
+  .vantagens__conteudo {
+    flex-direction: column;
+    gap: var(--gap-l);
+  }
+}
 
 .vantagens__textos {
   display: flex;
@@ -423,6 +494,11 @@ body {
   align-items: start;
   width: 40%;
   gap: var(--gap-m);
+}
+@media screen and (max-width: 425px) {
+  .vantagens__textos {
+    width: 100%;
+  }
 }
 .vantagens__textos > h2 {
   color: var(--cor-titulo);
@@ -641,6 +717,12 @@ body {
   display: flex;
   gap: var(--gap-xl);
   padding: var(--padding-2xl) 0;
+}
+@media screen and (max-width: 425px) {
+  .rodape {
+    flex-direction: column;
+    gap: var(--gap-l);
+  }
 }
 
 .rodape__informacoes {
