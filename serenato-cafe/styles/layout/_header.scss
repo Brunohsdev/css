@@ -67,6 +67,14 @@
       }
     }
   }
+  @include mixins.response-to(custom-64){
+    .navbar-menu{
+      display: none;
+    }
+    .navbar-toggler{
+      display: block;
+    }
+  }
 }
 .sidebar {
   position: fixed;
